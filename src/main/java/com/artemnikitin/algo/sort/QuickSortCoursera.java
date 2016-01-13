@@ -15,7 +15,6 @@ public class QuickSortCoursera {
     static int last;
 
     public static void main(String[] args) throws IOException {
-        data = getDataFromFile("/Users/artemnikitin/Downloads/10.txt");
         first = data[0];
         last = data[data.length - 1];
         System.out.println(Arrays.toString(data));
@@ -50,24 +49,5 @@ public class QuickSortCoursera {
         data[i] = data[j];
         data[j] = temp;
     }
-
-    private static int[] getDataFromFile(String file) throws IOException {
-        List<Integer> result = new ArrayList<>();
-        BufferedReader br = new BufferedReader(new FileReader(file));
-        String line = br.readLine();
-        while(line != null) {
-            result.add(Integer.parseInt(line));
-            line = br.readLine();
-        }
-        return returnArray(result);
-    }
-
-    private static int[] returnArray(List<Integer> result) {
-        int[] array = new int[result.size()];
-        for (int i = 0; i < array.length; i++)
-            array[i] = result.get(i);
-        return array;
-    }
-
 
 }
