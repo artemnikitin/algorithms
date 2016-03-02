@@ -1,12 +1,23 @@
-group 'com.artemnikitin'
-version '1.0-SNAPSHOT'
+plugins {
+    id 'me.champeau.gradle.jmh' version '0.2.0'
+}
 
+apply plugin: 'me.champeau.gradle.jmh'
 apply plugin: 'java'
+apply plugin: 'idea'
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    jmh 'commons-io:commons-io:2.4'
+}
 
 repositories {
     mavenCentral()
 }
 
-dependencies {
-    testCompile 'junit:junit:4.12'
+jmh {
+    warmupIterations = 10
+    iterations = 25
+    timeUnit = 's'
+    timeout= '10'
 }
