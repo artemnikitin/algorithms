@@ -2,9 +2,9 @@ plugins {
     id 'me.champeau.gradle.jmh' version '0.2.0'
 }
 
-apply plugin: 'me.champeau.gradle.jmh'
 apply plugin: 'java'
 apply plugin: 'idea'
+apply plugin: 'me.champeau.gradle.jmh'
 
 dependencies {
     testCompile 'junit:junit:4.12'
@@ -17,7 +17,5 @@ repositories {
 
 jmh {
     warmupIterations = 10
-    iterations = 25
-    timeUnit = 's'
-    timeout= '10'
+    iterations = 15
 }
