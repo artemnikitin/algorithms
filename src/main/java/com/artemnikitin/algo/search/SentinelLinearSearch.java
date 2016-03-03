@@ -6,6 +6,7 @@ public class SentinelLinearSearch {
 
     public static void main(String... args){
         search(data, 5);
+        search(data, 55);
         search(data, 122);
     }
 
@@ -23,7 +24,5 @@ public class SentinelLinearSearch {
             System.out.println("Element " + num + " not found.");
         }
     }
-
-
 
 }
