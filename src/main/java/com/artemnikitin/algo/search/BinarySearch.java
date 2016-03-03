@@ -5,17 +5,17 @@ public class BinarySearch {
     static int[] data = { 0, 2, 5, 6, 7, 61, 122, 566 };
 
     public static void main(String[] args){
-        searchFor(0, data.length - 1, 61);
-        searchFor(0, data.length - 1, 62);
-        searchFor(0, data.length - 1, 566);
-        searchFor(0, data.length - 1, 567);
-        iterative(0, data.length - 1, 61);
-        iterative(0, data.length - 1, 62);
-        iterative(0, data.length - 1, 566);
-        iterative(0, data.length - 1, 567);
+        recursive(data, 0, data.length - 1, 61);
+        recursive(data, 0, data.length - 1, 62);
+        recursive(data, 0, data.length - 1, 566);
+        recursive(data, 0, data.length - 1, 567);
+        iterative(data, 0, data.length - 1, 61);
+        iterative(data, 0, data.length - 1, 62);
+        iterative(data, 0, data.length - 1, 566);
+        iterative(data, 0, data.length - 1, 567);
     }
 
-    private static void searchFor(int low, int high, int num) {
+    public static void recursive(int[] data, int low, int high, int num) {
         if (low > high) {
             System.out.println("Element not found!");
         } else {
@@ -24,15 +24,15 @@ public class BinarySearch {
                 System.out.println("Element found!");
             }
             else if (num < data[pivot]){
-                searchFor(low, --pivot, num);
+                recursive(data, low, --pivot, num);
             }
             else if (num > data[pivot]){
-                searchFor(++pivot, high, num);
+                recursive(data, ++pivot, high, num);
             }
         }
     }
 
-    private static void iterative(int low, int high, int num) {
+    public static void iterative(int[] data, int low, int high, int num) {
         while(high >= low) {
             int pivot = low + (high - low) / 2;
             if (num == data[pivot]) {
