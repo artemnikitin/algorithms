@@ -8,29 +8,28 @@ import com.artemnikitin.algo.search.SentinelLinearSearch;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 
-@BenchmarkMode(Mode.SampleTime)
-@OutputTimeUnit(TimeUnit.NANOSECONDS)
-@State(Scope.Thread)
-@Timeout(time=25)
+@BenchmarkMode(Mode.Throughput)
+@OutputTimeUnit(TimeUnit.MILLISECONDS)
+@State(Scope.Benchmark)
+@Timeout(time = 10, timeUnit = TimeUnit.SECONDS)
+@Fork(value = 1)
 public class LinearSearchComparison {
 
-    int[] array1;
-    int[] array2;
+    int[] array;
 
     @Setup
     public void setup() {
-        array1 = ArrayGeneration.generateArray(100_000);
-        array2 = array1;
+        array = ArrayGeneration.generateArray(100_000);
     }
 
     @Benchmark
     public void SimpleLinear() {
-        LinearSearch.searchFor(array1, 4);
+        LinearSearch.searchFor(array, 4);
     }
 
     @Benchmark
     public void SentinelLinear() {
-        SentinelLinearSearch.search(array2, 4);
+        SentinelLinearSearch.search(array, 4);
     }
 
 }
