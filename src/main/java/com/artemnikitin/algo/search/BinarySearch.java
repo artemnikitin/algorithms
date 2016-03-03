@@ -15,19 +15,20 @@ public class BinarySearch {
         iterative(0, data.length - 1, 567);
     }
 
-    private static void searchFor(int low, int high, int num){
-        int pivot = low + (high - low) / 2 ;
-        if(num == data[pivot]){
-            System.out.println("Element found!");
-       } 
-        else if(num != data[pivot] && low >= high){
+    private static void searchFor(int low, int high, int num) {
+        if (low > high) {
             System.out.println("Element not found!");
-        }
-        else if (num < data[pivot]){
-            searchFor(low, --pivot, num);
-        }
-        else if (num > data[pivot]){
-            searchFor(++pivot, high, num);
+        } else {
+            int pivot = low + (high - low) / 2 ;
+            if(num == data[pivot]){
+                System.out.println("Element found!");
+            }
+            else if (num < data[pivot]){
+                searchFor(low, --pivot, num);
+            }
+            else if (num > data[pivot]){
+                searchFor(++pivot, high, num);
+            }
         }
     }
 
@@ -36,7 +37,7 @@ public class BinarySearch {
             int pivot = low + (high - low) / 2;
             if (num == data[pivot]) {
                 System.out.println("found");
-                break;
+                return;
             } else if (num < data[pivot]) {
                 high = pivot - 1;
             } else if (num > data[pivot]){
