@@ -8,16 +8,34 @@ public class SelectionSort {
 
     public static void main(String[] args){
         System.out.println(Arrays.toString(data));
-        for(int i = 0; i < data.length - 1; i++) sort(i);
+        sort(data);
         System.out.println(Arrays.toString(data));
     }
 
-    private static void sort(int i){
-        int pos = i;
-        for(int j = i; j < data.length; j++){
-            if(data[j] < data[pos]) pos = j;
+    private static void sort(int[] data){
+        for (int i = 0; i < data.length - 1; i++) {
+            int pos = i;
+            for (int j = i; j < data.length; j++) {
+                if (data[j] < data[pos]) {
+                    pos = j;
+                }
+            }
+            swap(i, pos);
         }
-        swap(i, pos);
+    }
+
+    private static void sort2(int[] data) {
+        for (int i = 0; i < data.length - 1; i++) {
+            int pos = i;
+            for (int j = i; j < data.length; j++) {
+                if (data[j] < data[pos]) {
+                    pos = j;
+                }
+            }
+            if (i < pos) {
+                swap(i, pos);
+            }
+        }
     }
 
     private static void swap(int first, int second){
