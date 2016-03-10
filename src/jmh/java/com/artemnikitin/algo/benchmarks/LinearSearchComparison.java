@@ -1,12 +1,11 @@
 package com.artemnikitin.algo.benchmarks;
 
-import java.util.concurrent.TimeUnit;
-
 import com.artemnikitin.algo.benchmarks.support.ArrayGeneration;
 import com.artemnikitin.algo.search.LinearSearch;
 import com.artemnikitin.algo.search.SentinelLinearSearch;
 import org.openjdk.jmh.annotations.*;
-import org.openjdk.jmh.infra.Blackhole;
+
+import java.util.concurrent.TimeUnit;
 
 @BenchmarkMode(Mode.Throughput)
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
