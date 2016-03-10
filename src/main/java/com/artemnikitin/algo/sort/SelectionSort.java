@@ -24,25 +24,10 @@ public class SelectionSort {
         }
     }
 
-    private static void sort2(int[] data) {
-        for (int i = 0; i < data.length - 1; i++) {
-            int pos = i;
-            for (int j = i; j < data.length; j++) {
-                if (data[j] < data[pos]) {
-                    pos = j;
-                }
-            }
-            if (i < pos) {
-                swap(i, pos);
-            }
-        }
-    }
-
     private static void swap(int first, int second){
         int temp = data[first];
         data[first] = data[second];
         data[second] = temp;
     }
-
 
 }

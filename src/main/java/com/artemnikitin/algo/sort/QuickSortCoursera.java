@@ -13,7 +13,7 @@ public class QuickSortCoursera {
         System.out.println(Arrays.toString(data));
     }
 
-    private static void quicksort(int low, int high){
+    private static void quicksort(int low, int high) {
         if (high > low) {
             int i = low, j = high;
             int pivot = low + (high - low) / 2;
