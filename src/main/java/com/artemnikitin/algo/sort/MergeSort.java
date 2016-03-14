@@ -4,7 +4,7 @@ import com.artemnikitin.algo.Data;
 
 import java.util.Arrays;
 
-public class MergeSortMyImpl {
+public class MergeSort {
 
     static int[] data = Data.UNSORTED_ARRAY;
     static int[] helper = Data.HELPER_ARRAY;
