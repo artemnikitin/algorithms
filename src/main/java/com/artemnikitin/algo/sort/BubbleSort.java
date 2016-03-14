@@ -1,10 +1,12 @@
 package com.artemnikitin.algo.sort;
 
+import com.artemnikitin.algo.Data;
+
 import java.util.Arrays;
 
 public class BubbleSort {
 
-    static int[] data = {11, 4, 7, 0, 2, 8, 0};
+    static int[] data = Data.UNSORTED_ARRAY;
 
     public static void main(String[] args){
         System.out.println(Arrays.toString(data));

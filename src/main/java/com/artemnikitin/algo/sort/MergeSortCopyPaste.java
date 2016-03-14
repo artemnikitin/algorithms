@@ -1,10 +1,12 @@
 package com.artemnikitin.algo.sort;
 
+import com.artemnikitin.algo.Data;
+
 import java.util.Arrays;
 
 public class MergeSortCopyPaste {
 
-    private static int[] data = {20, 0, 7, 1, 15, 35, 11, 0};
+    private static int[] data = Data.UNSORTED_ARRAY;
     private int[] numbers;
     private int[] helper;
 

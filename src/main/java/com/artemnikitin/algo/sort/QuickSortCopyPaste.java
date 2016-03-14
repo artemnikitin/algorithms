@@ -1,10 +1,12 @@
 package com.artemnikitin.algo.sort;
 
+import com.artemnikitin.algo.Data;
+
 import java.util.Arrays;
 
 public class QuickSortCopyPaste {
 
-    private static int[] numbers = {20, 8, 7, 0, 15, 35, 11, 0};
+    private static int[] numbers = Data.UNSORTED_ARRAY;
 
     public static void main(String[] args){
         System.out.println(Arrays.toString(numbers));
