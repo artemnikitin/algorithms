@@ -26,28 +26,28 @@ public class MergeSort {
 
     private static void mergeResults(int low, int pivot, int high) {
         System.arraycopy(data, low, helper, low, high + 1 - low);
-        int left_idx = low;
-        int right_idx = pivot + 1;
+        int left = low;
+        int right = pivot + 1;
         int counter = low;
-        while (left_idx <= pivot && right_idx <= high) {
-            if (helper[left_idx] <= helper[right_idx]) {
-                data[counter] = helper[left_idx];
-                left_idx++;
+        while (left <= pivot && right <= high) {
+            if (helper[left] <= helper[right]) {
+                data[counter] = helper[left];
+                left++;
             } else {
-                data[counter] = helper[right_idx];
-                right_idx++;
+                data[counter] = helper[right];
+                right++;
             }
             counter++;
         }
-        while (left_idx <= pivot) {
-            data[counter] = helper[left_idx];
+        while (left <= pivot) {
+            data[counter] = helper[left];
             counter++;
-            left_idx++;
+            left++;
         }
-        while (right_idx <= high) {
-            data[counter] = helper[right_idx];
+        while (right <= high) {
+            data[counter] = helper[right];
             counter++;
-            right_idx++;
+            right++;
         }
     }
 
