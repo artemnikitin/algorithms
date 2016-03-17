@@ -14,8 +14,8 @@ public class SortArrayWith1And2 {
 
     private static void sort(int[] data) {
         int counter = 0;
-        for (int aData : data) {
-            if (aData == 1) counter++;
+        for (int element : data) {
+            if (element == 1) counter++;
         }
         for (int i = 0; i < counter; i++) {
             data[i] = 1;
