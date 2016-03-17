@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
 @State(Scope.Benchmark)
 @Timeout(time = 10, timeUnit = TimeUnit.SECONDS)
-@Fork(value = 1)
+@Fork(value = 2)
 public class LinearSearchComparison {
 
     int[] array;
