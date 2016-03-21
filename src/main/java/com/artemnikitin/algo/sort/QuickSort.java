@@ -11,11 +11,11 @@ public class QuickSort {
 
     public static void main(String[] args) throws IOException {
         System.out.println(Arrays.toString(data));
-        quicksort(0, data.length - 1);
+        quicksort(data, 0, data.length - 1);
         System.out.println(Arrays.toString(data));
     }
 
-    private static void quicksort(int low, int high) {
+    private static void quicksort(int[] data, int low, int high) {
         if (high > low) {
             int i = low, j = high;
             int pivot = low + (high - low) / 2;
@@ -28,8 +28,8 @@ public class QuickSort {
                     j--;
                 }
             }
-            quicksort(low, j);
-            quicksort(i, high);
+            quicksort(data, low, j);
+            quicksort(data, i, high);
         }
     }
 
