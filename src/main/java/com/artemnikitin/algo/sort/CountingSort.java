@@ -7,15 +7,11 @@ import java.util.Arrays;
 public class CountingSort {
 
     static int[] data = Data.UNSORTED_ARRAY;
-    static int[] data2 = Data.UNSORTED_ARRAY_2;
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(data));
-        countingSort(data, 0, 35);
+        countingSort(data, -3, 35);
         System.out.println(Arrays.toString(data));
-        System.out.println(Arrays.toString(data2));
-        countingSort(data2, -333, 39);
-        System.out.println(Arrays.toString(data2));
     }
 
     public static void countingSort(int[] data, int min, int max){
