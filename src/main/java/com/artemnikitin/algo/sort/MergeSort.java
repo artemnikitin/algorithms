@@ -9,13 +9,13 @@ public class MergeSort {
     static int[] data = Data.UNSORTED_ARRAY;
     static int[] helper = Data.HELPER_ARRAY;
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println(Arrays.toString(data));
         mergeSort(0, data.length - 1);
         System.out.println(Arrays.toString(data));
     }
 
-    public static void mergeSort(int low, int high){
+    public static void mergeSort(int low, int high) {
         if (high > low) {
             int pivot = low + (high - low) / 2;
             mergeSort(low, pivot);

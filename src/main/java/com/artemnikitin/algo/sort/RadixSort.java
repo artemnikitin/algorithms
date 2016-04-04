@@ -1,7 +1,5 @@
 package com.artemnikitin.algo.sort;
 
-import com.artemnikitin.algo.Data;
-
 import java.util.Arrays;
 
 public class RadixSort {
@@ -14,7 +12,7 @@ public class RadixSort {
         System.out.println(Arrays.toString(data));
     }
 
-    public static void radixSort(int[] data){
+    public static void radixSort(int[] data) {
         int max = data[0], exp = 1;
         int[] temp = new int[data.length];
 

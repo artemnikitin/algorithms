@@ -14,14 +14,14 @@ public class CountingSort {
         System.out.println(Arrays.toString(data));
     }
 
-    public static void countingSort(int[] data, int min, int max){
+    public static void countingSort(int[] data, int min, int max) {
         int[] count = new int[max - min + 1];
         for (int number : data) {
             count[number - min]++;
         }
         int z = 0;
         for (int i = min; i <= max; i++) {
-            while (count[i - min] > 0){
+            while (count[i - min] > 0) {
                 data[z] = i;
                 z++;
                 count[i - min]--;

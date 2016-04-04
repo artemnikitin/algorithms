@@ -2,7 +2,7 @@ package com.artemnikitin.algo.collections;
 
 public class BinaryTreesSamples {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
         tree.add(1);
         tree.add(5);

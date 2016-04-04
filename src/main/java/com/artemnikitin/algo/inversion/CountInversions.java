@@ -15,16 +15,16 @@ public class CountInversions {
 
     public static int countUneffective() {
         int counter = 0;
-        for(int i = 0; i < data.length - 1; i++) {
-            for(int j = i + 1; j < data.length; j++)
-                if(data[i] > data[j]) counter++;
+        for (int i = 0; i < data.length - 1; i++) {
+            for (int j = i + 1; j < data.length; j++)
+                if (data[i] > data[j]) counter++;
         }
         return counter;
     }
 
     public static int countEffective(int start, int end) {
         int counter = 0;
-        if(start == end) return counter;
+        if (start == end) return counter;
         int pivot = end + (start - end) / 2;
         counter += countEffective(start, pivot);
         counter += countEffective(pivot + 1, end);
@@ -35,7 +35,7 @@ public class CountInversions {
     private static int merge(int start, int pivot, int end) {
         int counter = 0;
         int low = start, middle = pivot;
-        while(low <= middle && middle <= end) {
+        while (low <= middle && middle <= end) {
             for (int i = 0; i < temp.length; i++) {
                 if (data[low] <= data[middle]) {
                     low++;

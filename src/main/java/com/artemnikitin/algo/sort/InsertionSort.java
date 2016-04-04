@@ -8,7 +8,7 @@ public class InsertionSort {
 
     static int[] data = Data.UNSORTED_ARRAY;
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         System.out.println(Arrays.toString(data));
         sort(data);
         System.out.println(Arrays.toString(data));

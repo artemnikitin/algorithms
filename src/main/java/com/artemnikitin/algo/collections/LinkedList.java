@@ -5,46 +5,46 @@ import java.util.NoSuchElementException;
 
 public class LinkedList {
 
-    private class Node{
+    private class Node {
         public Object data;
         public Node next;
     }
 
     private Node first;
 
-    public LinkedList(){
+    public LinkedList() {
         first = null;
     }
 
-    public Object getFirst(){
-        if( first == null ) throw new NoSuchElementException();
+    public Object getFirst() {
+        if (first == null) throw new NoSuchElementException();
         return first.data;
     }
 
-    public void addFirst(Object element){
+    public void addFirst(Object element) {
         Node node = new Node();
         node.data = element;
         node.next = first;
         first = node;
     }
 
-    public Object removeFirst(){
-        if( first == null ) throw new NoSuchElementException();
+    public Object removeFirst() {
+        if (first == null) throw new NoSuchElementException();
         Object element = first.data;
         first = first.next;
         return element;
     }
 
-    public ListIterator listIterator(){
+    public ListIterator listIterator() {
         return new LinkedListIterator();
     }
 
-    private class LinkedListIterator implements ListIterator{
+    private class LinkedListIterator implements ListIterator {
 
         private Node position;
         private Node previous;
 
-        public LinkedListIterator(){
+        public LinkedListIterator() {
             position = null;
             previous = null;
         }
@@ -56,9 +56,9 @@ public class LinkedList {
 
         @Override
         public Object next() {
-            if(!hasNext()) throw new NoSuchElementException();
+            if (!hasNext()) throw new NoSuchElementException();
             previous = position;
-            if(position == null) position = first;
+            if (position == null) position = first;
             else position = position.next;
             return position.data;
         }
@@ -85,8 +85,8 @@ public class LinkedList {
 
         @Override
         public void remove() {
-            if(previous == position) throw new IllegalStateException();
-            if(position == first) removeFirst();
+            if (previous == position) throw new IllegalStateException();
+            if (position == first) removeFirst();
             else previous.next = position.next;
             position = previous;
         }
