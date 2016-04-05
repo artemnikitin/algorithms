@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class SortArrayWith1And2 {
 
-    static int[] data = {1, 2, 2, 1, 2, 2, 1, 1};
+    private static int[] data = {1, 2, 2, 1, 2, 2, 1, 1};
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(data));

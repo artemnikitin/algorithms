@@ -6,8 +6,8 @@ import java.util.Arrays;
 
 public class MergeSort {
 
-    static int[] data = Data.UNSORTED_ARRAY;
-    static int[] helper = Data.HELPER_ARRAY;
+    private static int[] data = Data.UNSORTED_ARRAY;
+    private static int[] helper = Data.HELPER_ARRAY;
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(data));

@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class QuickSort {
 
-    static int[] data = Data.UNSORTED_ARRAY;
+    private static int[] data = Data.UNSORTED_ARRAY;
 
     public static void main(String[] args) throws IOException {
         System.out.println(Arrays.toString(data));
