@@ -15,12 +15,15 @@ public class CountingSort {
     }
 
     public static void countingSort(int[] data, int min, int max) {
+        // create and fill temp array
         int[] count = new int[max - min + 1];
         for (int number : data) {
             count[number - min]++;
         }
         int z = 0;
+        // in for loop process temp array
         for (int i = min; i <= max; i++) {
+            // if element > 0, then process it
             while (count[i - min] > 0) {
                 data[z] = i;
                 z++;
