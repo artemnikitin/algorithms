@@ -17,8 +17,8 @@ public class CountingSort {
     public static void countingSort(int[] data, int min, int max) {
         // create and fill temp array
         int[] count = new int[max - min + 1];
-        for (int number : data) {
-            count[number - min]++;
+        for (int i = 0; i < data.length; i++) {
+            count[i - min]++;
         }
         int z = 0;
         // in for loop process temp array
