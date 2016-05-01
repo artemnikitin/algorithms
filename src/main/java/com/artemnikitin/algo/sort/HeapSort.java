@@ -10,37 +10,35 @@ public class HeapSort {
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(data));
-        sort();
+        sort(data);
         System.out.println(Arrays.toString(data));
     }
 
-    private static void sort() {
+    private static void sort(int[] data) {
         int n = data.length - 1;
         for (int i = (n - 1) / 2; i >= 0; i--)
-            fixHeap(i, n);
+            fixHeap(data, i, n);
         while (n > 0) {
-            swap(0, n);
+            swap(data, 0, n);
             n--;
-            fixHeap(0, n);
+            fixHeap(data, 0, n);
         }
     }
 
-    private static void fixHeap(int i, int n) {
+    private static void fixHeap(int[] data, int i, int n) {
         int root = data[i];
-        int index = i;
-        int lastIndex = n;
         boolean more = true;
         while (more) {
-            int childIndex = getLeftChildIndex(index);
-            if (childIndex <= lastIndex) {
-                int rightChildIndex = getRightChildIndex(index);
-                if (rightChildIndex <= lastIndex &&
+            int childIndex = getLeftChildIndex(i);
+            if (childIndex <= n) {
+                int rightChildIndex = getRightChildIndex(i);
+                if (rightChildIndex <= n &&
                         data[rightChildIndex] > data[childIndex]) {
                     childIndex = rightChildIndex;
                 }
                 if (data[childIndex] > root) {
-                    data[index] = data[childIndex];
-                    index = childIndex;
+                    data[i] = data[childIndex];
+                    i = childIndex;
                 } else {
                     more = false;
                 }
@@ -48,10 +46,10 @@ public class HeapSort {
                 more = false;
             }
         }
-        data[index] = root;
+        data[i] = root;
     }
 
-    private static void swap(int first, int second) {
+    private static void swap(int[] data, int first, int second) {
         int temp = data[first];
         data[first] = data[second];
         data[second] = temp;
