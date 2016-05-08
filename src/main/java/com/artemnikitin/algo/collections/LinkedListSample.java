@@ -12,7 +12,6 @@ public class LinkedListSample {
         names.addLast("Burberry");
         names.addLast("Zaira");
 
-
         ListIterator<String> iterator = names.listIterator();
         iterator.next();
         iterator.add("Sergey");

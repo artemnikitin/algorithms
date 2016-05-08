@@ -5,11 +5,6 @@ import java.util.NoSuchElementException;
 
 public class LinkedList {
 
-    private class Node {
-        public Object data;
-        public Node next;
-    }
-
     private Node first;
 
     public LinkedList() {
@@ -37,6 +32,11 @@ public class LinkedList {
 
     public ListIterator listIterator() {
         return new LinkedListIterator();
+    }
+
+    private class Node {
+        public Object data;
+        public Node next;
     }
 
     private class LinkedListIterator implements ListIterator {

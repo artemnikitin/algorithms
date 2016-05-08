@@ -11,6 +11,14 @@ public class MinHeap {
         elements.add(null);
     }
 
+    private static int getLeftChildIndex(int index) {
+        return 2 * index;
+    }
+
+    private static int getRightChildIndex(int index) {
+        return 2 * index + 1;
+    }
+
     public void add(Comparable newElement) {
         elements.add(null);
         int index = elements.size() - 1;
@@ -65,14 +73,6 @@ public class MinHeap {
             }
         }
         elements.set(index, root);
-    }
-
-    private static int getLeftChildIndex(int index) {
-        return 2 * index;
-    }
-
-    private static int getRightChildIndex(int index) {
-        return 2 * index + 1;
     }
 
     private int getParentIndex(int index) {

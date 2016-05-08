@@ -10,15 +10,12 @@ public class BinaryTreesSamples {
         tree.add(10);
         tree.add(3);
         tree.print();
-        System.out.println();
 
         tree.remove(7);
         tree.print();
-        System.out.println();
 
         tree.remove(2);
         tree.print();
-        System.out.println();
 
         System.out.println("Element found " + tree.find(10));
         System.out.println("Element not found " + tree.find(7));
