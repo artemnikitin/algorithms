@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 @Fork(value = 2)
 public class BinarySearchComparison {
 
-    int[] array;
+    private int[] array;
 
     @Setup
     public void setup() {

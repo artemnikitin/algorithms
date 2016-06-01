@@ -7,9 +7,9 @@ public class Factorial {
         System.out.println(factorial(3));
     }
 
-    public static int factorial(int n) throws Exception {
+    public static int factorial(int n) throws IllegalArgumentException {
         if (n < 0) {
-            throw new Exception("n should be >= 0");
+            throw new IllegalArgumentException("n should be >= 0");
         } else if (n == 0) {
             return 1;
         } else {

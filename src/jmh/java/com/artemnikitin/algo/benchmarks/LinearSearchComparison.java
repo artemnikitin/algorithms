@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 @Fork(value = 2)
 public class LinearSearchComparison {
 
-    int[] array;
+    private int[] array;
 
     @Setup
     public void setup() {

@@ -2,7 +2,7 @@ package com.artemnikitin.algo.search;
 
 public class BinarySearch {
 
-    static int[] data = {0, 2, 5, 6, 7, 61, 122, 566};
+    private static int[] data = {0, 2, 5, 6, 7, 61, 122, 566};
 
     public static void main(String[] args) {
         recursive(data, 0, data.length - 1, 61);

@@ -85,8 +85,8 @@ public class LinkedList {
 
         @Override
         public void remove() {
-            if (previous == position) throw new IllegalStateException();
-            if (position == first) removeFirst();
+            if (previous.equals(position)) throw new IllegalStateException();
+            if (position.equals(first)) removeFirst();
             else previous.next = position.next;
             position = previous;
         }
