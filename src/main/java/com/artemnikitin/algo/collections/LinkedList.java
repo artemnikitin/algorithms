@@ -98,7 +98,7 @@ public class LinkedList {
 
         @Override
         public void add(Object o) {
-
+            //TODO
         }
 
     }
