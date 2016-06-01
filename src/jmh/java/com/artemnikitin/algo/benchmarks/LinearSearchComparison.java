@@ -22,12 +22,12 @@ public class LinearSearchComparison {
     }
 
     @Benchmark
-    public void SimpleLinear() {
+    public void simpleLinear() {
         LinearSearch.searchFor(array, 4);
     }
 
     @Benchmark
-    public void SentinelLinear() {
+    public void sentinelLinear() {
         SentinelLinearSearch.search(array, 4);
     }
 

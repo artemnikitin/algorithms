@@ -34,7 +34,8 @@ public class CountInversions {
 
     private static int merge(int start, int pivot, int end) {
         int counter = 0;
-        int low = start, middle = pivot;
+        int low = start;
+        int middle = pivot;
         while (low <= middle && middle <= end) {
             for (int i = 0; i < temp.length; i++) {
                 if (data[low] <= data[middle]) {

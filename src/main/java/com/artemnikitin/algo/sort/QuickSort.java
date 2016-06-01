@@ -17,7 +17,8 @@ public class QuickSort {
 
     private static void quicksort(int[] data, int low, int high) {
         if (high > low) {
-            int i = low, j = high;
+            int i = low;
+            int j = high;
             int pivot = low + (high - low) / 2;
             while (i <= j) {
                 while (data[i] < data[pivot]) i++;
