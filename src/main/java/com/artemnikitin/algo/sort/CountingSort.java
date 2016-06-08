@@ -16,18 +16,18 @@ public class CountingSort {
 
     public static void countingSort(int[] data, int min, int max) {
         // create and fill temp array
-        int[] count = new int[max - min + 1];
+        int[] temp = new int[max - min + 1];
         for (int i = 0; i < data.length; i++) {
-            count[i - min]++;
+            temp[data[i] - min]++;
         }
-        int z = 0;
+        int index = 0;
         // in for loop process temp array
         for (int i = min; i <= max; i++) {
             // if element > 0, then process it
-            while (count[i - min] > 0) {
-                data[z] = i;
-                z++;
-                count[i - min]--;
+            while (temp[i - min] > 0) {
+                data[index] = i;
+                index++;
+                temp[i - min]--;
             }
         }
     }
