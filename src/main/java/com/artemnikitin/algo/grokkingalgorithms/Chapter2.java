@@ -1,11 +1,13 @@
 package com.artemnikitin.algo.grokkingalgorithms;
 
+import com.artemnikitin.algo.Data;
+
 import java.util.Arrays;
 
 public class Chapter2 {
 
     public static void main(String[] args) {
-        int[] unsorted = new int[]{-1, 345, 0, 28, 1, 23, 7};
+        int[] unsorted = Data.UNSORTED_ARRAY;
 
         System.out.println(Arrays.toString(unsorted));
         selectionSort(unsorted);
