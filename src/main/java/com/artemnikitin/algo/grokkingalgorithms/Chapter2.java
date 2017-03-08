@@ -23,14 +23,8 @@ public class Chapter2 {
                     smallestIndex = j;
                 }
             }
-            swap(array, i, smallestIndex);
+            Common.swap(array, i, smallestIndex);
         }
-    }
-
-    static void swap(int[] array, int i, int j) {
-        int temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
     }
 
 }
