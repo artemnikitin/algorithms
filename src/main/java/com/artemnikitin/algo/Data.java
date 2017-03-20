@@ -8,6 +8,6 @@ public class Data {
 
     public final static int[] UNSORTED_ARRAY_2 = {3, -333, 39, 20, 0};
 
-    public final static int[] HELPER_ARRAY = new int[UNSORTED_ARRAY.length];
+    public final static int[] HELPER_ARRAY = new int[UNSORTED_ARRAY.length]; 
 
 }
