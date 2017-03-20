@@ -1,6 +1,7 @@
 package com.artemnikitin.algo.grokkingalgorithms;
 
 import com.artemnikitin.algo.Data;
+import com.artemnikitin.algo.grokkingalgorithms.common.Common;
 
 import java.util.Arrays;
 
@@ -20,13 +21,13 @@ public class Chapter4Quicksort {
             int max = high;
             int pivot = low + (high - low) / 2;
             while (min <= max) {
-                 while (array[min] < array[pivot]) min++;
-                 while (array[max] > array[pivot]) max--;
-                 if (min <= max) {
-                      Common.swap(array, min, max);
-                      min++;
-                      max--;
-                 }
+                while (array[min] < array[pivot]) min++;
+                while (array[max] > array[pivot]) max--;
+                if (min <= max) {
+                    Common.swap(array, min, max);
+                    min++;
+                    max--;
+                }
             }
             quicksort(array, low, max);
             quicksort(array, min, high);

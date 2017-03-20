@@ -1,4 +1,4 @@
-package com.artemnikitin.algo.grokkingalgorithms;
+package com.artemnikitin.algo.grokkingalgorithms.common;
 
 public class Node<E> {
     public final Node next;

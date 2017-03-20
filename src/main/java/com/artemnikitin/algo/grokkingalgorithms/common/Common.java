@@ -1,8 +1,8 @@
-package com.artemnikitin.algo.grokkingalgorithms;
+package com.artemnikitin.algo.grokkingalgorithms.common;
 
 public class Common {
 
-    static void swap(int[] array, int i, int j) {
+    public static void swap(int[] array, int i, int j) {
         int temp = array[i];
         array[i] = array[j];
         array[j] = temp;

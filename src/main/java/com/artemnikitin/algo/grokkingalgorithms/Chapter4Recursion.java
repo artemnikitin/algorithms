@@ -1,6 +1,7 @@
 package com.artemnikitin.algo.grokkingalgorithms;
 
 import com.artemnikitin.algo.Data;
+import com.artemnikitin.algo.grokkingalgorithms.common.Node;
 
 import java.util.Arrays;
 
