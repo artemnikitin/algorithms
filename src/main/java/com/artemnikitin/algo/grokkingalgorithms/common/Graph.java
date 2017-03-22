@@ -1,11 +1,12 @@
 package com.artemnikitin.algo.grokkingalgorithms.common;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class Graph {
 
     private final int size;
-    private final LinkedList<Integer>[] adjacencyList;
+    private final List<Integer>[] adjacencyList;
 
     public Graph(int numOfVertices) {
         size = numOfVertices;
@@ -22,7 +23,7 @@ public class Graph {
         return size;
     }
 
-    public LinkedList<Integer>[] getAdjacencyList() {
+    public List<Integer>[] getAdjacencyList() {
         return adjacencyList;
     }
 

@@ -3,6 +3,7 @@ package com.artemnikitin.algo.grokkingalgorithms;
 import com.artemnikitin.algo.grokkingalgorithms.common.Graph;
 
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class Chapter6 {
@@ -32,7 +33,7 @@ public class Chapter6 {
             int node = queue.poll();
             System.out.print(node + " ");
 
-            LinkedList<Integer> list = graph.getAdjacencyList()[node];
+            List<Integer> list = graph.getAdjacencyList()[node];
             for (int i : list) {
                 if (!visited[i]) {
                     queue.add(i);
@@ -50,7 +51,7 @@ public class Chapter6 {
         visited[vertice] = true;
         System.out.print(vertice + " ");
 
-        LinkedList<Integer> list = graph.getAdjacencyList()[vertice];
+        List<Integer> list = graph.getAdjacencyList()[vertice];
         for (int i : list) {
             if (!visited[i]) dfsRecursive(graph, i, visited);
         }

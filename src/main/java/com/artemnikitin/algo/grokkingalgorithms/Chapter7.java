@@ -36,7 +36,7 @@ public class Chapter7 {
             for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
                 if (min == null || min.getValue() > entry.getValue()) min = entry;
             }
-            
+
             int src = min.getKey();
             int dest = min.getValue();
             markDist[src] = dest;

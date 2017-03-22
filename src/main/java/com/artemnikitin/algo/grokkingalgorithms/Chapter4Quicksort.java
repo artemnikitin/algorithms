@@ -16,7 +16,7 @@ public class Chapter4Quicksort {
     }
 
     public static void quicksort(int[] array, int low, int high) {
-        if (low <= high) {
+        if (low < high) {
             int min = low;
             int max = high;
             int pivot = low + (high - low) / 2;
